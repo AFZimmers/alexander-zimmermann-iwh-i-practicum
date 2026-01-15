@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      h1 Update Custom Object Form
+      
+      if error
+        .error-message= error
+      
+      form(action="/update-cobj", method="POST")
+        .form-group
+          label(for="name") Name *
+          input#name(type="text", name="name", required, placeholder="Enter character name")
+        
+        .form-group
+          label(for="movie") Movie *
+          input#movie(type="text", name="movie", required, placeholder="Enter movie title")
+        
+        .form-group
+          label(for="actor") Actor *
+          input#actor(type="text", name="actor", required, placeholder="Enter actor name")
+        
+        .form-actions
+          button.button(type="submit") Create Record
+          a.button.secondary(href="/") Cancel
+      
+      .back-link
+        a(href="/") Return to the homepage
+

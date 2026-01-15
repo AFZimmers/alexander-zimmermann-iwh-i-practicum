@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      h1 Custom Objects List
+      
+      if error
+        .error-message= error
+      
+      .actions
+        a.button(href="/update-cobj") Add to this table
+      
+      if records && records.length > 0
+        table
+          thead
+            tr
+              th Name
+              th Movie
+              th Actor
+              th Created Date
+          tbody
+            each record in records
+              tr
+                td= record.properties.name || 'N/A'
+                td= record.properties.movie || 'N/A'
+                td= record.properties.actor || 'N/A'
+                td= record.createdAt ? new Date(record.createdAt).toLocaleDateString() : 'N/A'
+      else
+        p.no-records No records found. 
+          a(href="/update-cobj") Add your first record
+
