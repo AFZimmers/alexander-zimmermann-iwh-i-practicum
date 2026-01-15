@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Integrating With HubSpot I: Foundations Practicum
 
 This project is a Node.js application that integrates with the HubSpot API to manage custom objects.
@@ -85,3 +86,6 @@ https://app.hubspot.com/contacts/<test-account-id>/objects/2-56100384/views/all/
 - Pug for templating
 - The custom object must be associated with the contacts object type in HubSpot
 
+=======
+# practicum
+>>>>>>> 192d14a7129c6fdaaa22deb0f24c5b16e92836e7
