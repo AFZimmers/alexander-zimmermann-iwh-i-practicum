@@ -116,7 +116,7 @@ app.post('/update-cobj', async (req, res) => {
   }
 });
 
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   console.log(`Make sure to set HUBSPOT_API_KEY and CUSTOM_OBJECT_TYPE in your .env file`);
 });
