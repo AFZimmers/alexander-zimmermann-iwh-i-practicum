@@ -17,7 +17,7 @@ app.use(express.json());
 
 // HubSpot API configuration
 const HUBSPOT_API_KEY = process.env.HUBSPOT_API_KEY;
-const CUSTOM_OBJECT_TYPE = process.env.CUSTOM_OBJECT_TYPE || 'pets'; // Change this to your custom object type
+const CUSTOM_OBJECT_TYPE = process.env.CUSTOM_OBJECT_TYPE || 'movie_characters';
 
 // Helper function to make HubSpot API calls
 const hubspotRequest = async (method, endpoint, data = null) => {
